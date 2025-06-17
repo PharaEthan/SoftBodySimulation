@@ -1,8 +1,9 @@
 > This project is the final output of the **Computer Graphics II** module on physics simulation carried out at **Keymiung University in Korea (2025)**.
+> The demonstration is on [Youtube](https://youtu.be/MZiMaxaqmEo).
 
 # 💡 Soft Body Simulations - HXPBD Engine
 
-This document explains how to interact with the simulations and what each `mainX.cpp` file does.
+This document explains how to interact with the simulations and what each `MainX.cpp` file does.
 
 ---
 
@@ -32,14 +33,14 @@ This document explains how to interact with the simulations and what each `mainX
 
 ---
 
-## 🧪 Simulation Files (`main*.cpp`)
+## 🧪 Simulation Files (`Main*.cpp`)
 
 | File        | Description |
 |-------------|-------------|
-| **main.cpp**   | **Empty simulation**. A clean template to create or test your own custom scenes. |
-| **main1.cpp**  | **Sphere simulation**. <br/> You can: <br/> – Enable/disable **gravity** <br/> – Drag the sphere with the mouse <br/> – Change its **internal pressure** in real-time. |
-| **main2.cpp**  | Interactive **cloth simulation**. <br/> You can grab points of the cloth and observe soft-body deformations. |
-| **main3.cpp**  | Same as `main2.cpp`, but the cloth is **anchored** at its four corners using **FixedConstraints**, limiting edge motion. |
+| **Main.cpp**   | **Empty simulation**. A clean template to create or test your own custom scenes. |
+| **Main1.cpp**  | **Sphere simulation**. <br/> You can: <br/> – Enable/disable **gravity** <br/> – Drag the sphere with the mouse <br/> – Change its **internal pressure** in real-time. |
+| **Main2.cpp**  | Interactive **cloth simulation**. <br/> You can grab points of the cloth and observe soft-body deformations. |
+| **Main3.cpp**  | Same as `Main2.cpp`, but the cloth is **anchored** at its four corners using **FixedConstraints**, limiting edge motion. |
 
 ---
 
@@ -53,7 +54,7 @@ This document explains how to interact with the simulations and what each `mainX
 
 ## 🔧 Adding Your Own Scene
 
-To create your own setup, duplicate `Main.cpp`, rename it (e.g., `main4.cpp`), and use the `SceneFactory` helpers:
+To create your own setup, duplicate `Main.cpp`, rename it (e.g., `Main4.cpp`), and use the `SceneFactory` helpers:
 ```cpp
 SceneFactory::CreateCarpet(...);
 SceneFactory::CreateSphere(...);
@@ -78,21 +79,13 @@ To change the simulation, or just the hand of a project, simply change the line 
 
 ### Main1.cpp - Sphere Simulation
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation1A.mp4" type="video/mp4">
-</video>
-<video width="320" height="240" controls>
-  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation1B.mp4" type="video/mp4">
-</video>
+![Sphere Simulation A](./Docs/Simulation1A.gif)
+![Sphere Simulation B](./Docs/Simulation1B.gif)
 
 ### Main2.cpp - Free Cloth Simulation
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation2.mp4" type="video/mp4">
-</video>
+![Free Cloth Simulation](./Docs/Simulation2.gif)
 
 ### Main3.cpp - Anchored Cloth Simulation
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation3.mp4" type="video/mp4">
-</video>
+![Anchored Cloth Simulation](./Docs/Simulation3.gif)
