@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 12,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/x64/${presetName}/build",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+        "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/x64/${presetName}",
+        "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/x64/${presetName}",
+        "CMAKE_ARCHIVE_OUTPUT_DIRECTORY": "${sourceDir}/x64/${presetName}",
+        "CMAKE_OBJECT_DIRECTORY": "${sourceDir}/x64/${presetName}/build/CMakeFiles",
+        "CMAKE_OBJECT_PATH_MAX": "260"
+      }
+    },
+    {
+      "name": "debug",
+      "inherits": "default",
+      "description": "Debug Configuration with multi-process.",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS_DEBUG": "-DDEBUG",
+        "CMAKE_JOB_POOLS": "link=1",
+        "CMAKE_JOB_POOL_LINK": "link"
+      }
+    },
+    {
+      "name": "release",
+      "inherits": "default",
+      "description": "Release Configuration with multi-process.",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS_RELEASE": "-DNDEBUG"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Debug",
+      "configurePreset": "debug",
+      "jobs": 4,
+      "cleanFirst": true
+    },
+    {
+      "name": "Release",
+      "configurePreset": "release",
+      "cleanFirst": true
+    }
+  ]
+}
