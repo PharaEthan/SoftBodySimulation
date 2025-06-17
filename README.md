@@ -1,6 +1,6 @@
-> This project is the final output of the Computer Graphics II module on physics simulation carried out at Keymiung University in Korea (2025).
+> This project is the final output of the **Computer Graphics II** module on physics simulation carried out at **Keymiung University in Korea (2025)**.
 
-# 💡 Soft Body Simulations HXPBD
+# 💡 Soft Body Simulations - HXPBD Engine
 
 This document explains how to interact with the simulations and what each `mainX.cpp` file does.
 
@@ -59,7 +59,7 @@ SceneFactory::CreateCarpet(...);
 SceneFactory::CreateSphere(...);
 ```
 
-## Compilation
+## 🧱 Compilation
 
 In the `CMakeLists.txt`, you will find this:
 
@@ -74,25 +74,25 @@ Main1.cpp
 
 To change the simulation, or just the hand of a project, simply change the line containing `Main1.cpp` to `Main2.cpp` or `YourMain.cpp`.
 
-## Results
+## 🎬 Simulation Results
 
-### Main1.cpp
+### Main1.cpp - Sphere Simulation
 
 <video width="320" height="240" controls>
-  <source src="Docs/Simulation1A.mp4" type="video/mp4">
+  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation1A.mp4" type="video/mp4">
 </video>
 <video width="320" height="240" controls>
-  <source src="Docs/Simulation1B.mp4" type="video/mp4">
+  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation1B.mp4" type="video/mp4">
 </video>
 
-### Main2.cpp
+### Main2.cpp - Free Cloth Simulation
 
 <video width="320" height="240" controls>
-  <source src="Docs/Simulation2.mp4" type="video/mp4">
+  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation2.mp4" type="video/mp4">
 </video>
 
-### Main3.cpp
+### Main3.cpp - Anchored Cloth Simulation
 
 <video width="320" height="240" controls>
-  <source src="Docs/Simulation3.mp4" type="video/mp4">
+  <source src="https://github.com/PharaEthan/SoftBodySimulation/blob/main/Docs/Simulation3.mp4" type="video/mp4">
 </video>
